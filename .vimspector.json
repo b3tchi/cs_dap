@@ -1,0 +1,24 @@
+{
+  "configurations": {
+    "launch - netcoredbg": {
+      "adapter": "netcoredbg",
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/bin/Debug/net6.0/main.dll",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}",
+        "env": {}
+      }
+    },
+    "attach - netcoredbg": {
+      "adapter": "netcoredbg",
+      "configuration": {
+        "request": "attach",
+        "args": [],
+        "stopAtEntry": false,
+        "env": {}
+      }
+    }
+  }
+}

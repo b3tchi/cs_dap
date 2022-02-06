@@ -1,0 +1,15 @@
+/home/jan/repos/cs-vimspector/main/bin/Debug/net6.0/main
+/home/jan/repos/cs-vimspector/main/bin/Debug/net6.0/main.deps.json
+/home/jan/repos/cs-vimspector/main/bin/Debug/net6.0/main.runtimeconfig.json
+/home/jan/repos/cs-vimspector/main/bin/Debug/net6.0/main.dll
+/home/jan/repos/cs-vimspector/main/bin/Debug/net6.0/ref/main.dll
+/home/jan/repos/cs-vimspector/main/bin/Debug/net6.0/main.pdb
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.csproj.AssemblyReference.cache
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.GeneratedMSBuildEditorConfig.editorconfig
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.AssemblyInfoInputs.cache
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.AssemblyInfo.cs
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.csproj.CoreCompileInputs.cache
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.dll
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/ref/main.dll
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.pdb
+/home/jan/repos/cs-vimspector/main/obj/Debug/net6.0/main.genruntimeconfig.cache

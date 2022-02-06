@@ -1,0 +1,36 @@
+{
+  "adapters": {
+    "netcoredbg-debug": {
+      "attach": {
+        "pidProperty": "processId",
+        "pidSelect": "ask"
+      },
+      "command": [
+        "${gadgetDir}/netcoredbg/netcoredbg",
+        "--interpreter=vscode",
+        "--engineLogging=${workspaceRoot}/netcoredbg.engine.log",
+        "--log=${workspaceRoot}/netcoredbg.log"
+      ],
+      "configuration": {
+        "cwd": "${workspaceRoot}"
+      },
+      "name": "netcoredbg-debug"
+    }
+  },
+  "configurations": {
+    "test - netcoredbg": {
+      "adapter": "netcoredbg-debug",
+      "breakpoints": {
+        "exception": {
+            "unhandled": "Y",
+            "user-unhandled": "Y",
+            "throw": "Y",
+            "all": "N"
+        }
+      },
+      "configuration": {
+        "request": "attach"
+	  }
+    }
+  }
+}

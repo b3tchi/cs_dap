@@ -1,0 +1,25 @@
+271937.861 I/NETCOREDBG(P55310, T55310): main.cpp: main(346) > Netcoredbg started
+271937.861 I/NETCOREDBG(P55310, T55310): main.cpp: instantiate_protocol(110) > Creating protocol VSCodeProtocol
+271937.861 I/NETCOREDBG(P55310, T55310): main.cpp: main(383) > pidDebugee 0
+271937.870 I/NETCOREDBG(P55310, T55311): ioredirect.cpp: worker(163) > worker started
+271950.685 E/NETCOREDBG(P55310, T55310): breakpoints.cpp: ResolveBreakpoint(611) > m_modules.ResolveBreakpointFileAndLine(fullname, linenum, endLine) : 0x80004005
+271967.072 E/NETCOREDBG(P55310, T55310): frames.cpp: GetThreadsState(23) > controller->EnumerateThreads(&pThreads) : 0x80131c49
+271967.072 E/NETCOREDBG(P55310, T55310): vscodeprotocol.cpp: operator(509) > m_debugger->GetThreads(threads) : 0x80131c49
+271987.673 I/NETCOREDBG(P55310, T55311): ioredirect.cpp: operator(153) > IORedirectHelper::worker: terminated
+272106.626 I/NETCOREDBG(P55478, T55478): main.cpp: main(346) > Netcoredbg started
+272106.626 I/NETCOREDBG(P55478, T55478): main.cpp: instantiate_protocol(110) > Creating protocol VSCodeProtocol
+272106.626 I/NETCOREDBG(P55478, T55478): main.cpp: main(383) > pidDebugee 0
+272106.629 I/NETCOREDBG(P55478, T55479): ioredirect.cpp: worker(163) > worker started
+272128.191 I/NETCOREDBG(P55478, T55479): ioredirect.cpp: operator(153) > IORedirectHelper::worker: terminated
+272193.634 I/NETCOREDBG(P55565, T55565): main.cpp: main(346) > Netcoredbg started
+272193.634 I/NETCOREDBG(P55565, T55565): main.cpp: instantiate_protocol(110) > Creating protocol VSCodeProtocol
+272193.634 I/NETCOREDBG(P55565, T55565): main.cpp: main(383) > pidDebugee 0
+272193.641 I/NETCOREDBG(P55565, T55566): ioredirect.cpp: worker(163) > worker started
+272201.630 E/NETCOREDBG(P55565, T55565): frames.cpp: GetThreadsState(23) > controller->EnumerateThreads(&pThreads) : 0x80131c49
+272201.630 E/NETCOREDBG(P55565, T55565): vscodeprotocol.cpp: operator(509) > m_debugger->GetThreads(threads) : 0x80131c49
+272821.317 I/NETCOREDBG(P55565, T55566): ioredirect.cpp: operator(153) > IORedirectHelper::worker: terminated
+273735.269 I/NETCOREDBG(P56934, T56934): main.cpp: main(346) > Netcoredbg started
+273735.269 I/NETCOREDBG(P56934, T56934): main.cpp: instantiate_protocol(110) > Creating protocol VSCodeProtocol
+273735.270 I/NETCOREDBG(P56934, T56934): main.cpp: main(383) > pidDebugee 0
+273735.272 I/NETCOREDBG(P56934, T56935): ioredirect.cpp: worker(163) > worker started
+273735.282 F/NETCOREDBG(P56934, T56934): main.cpp: operator(348) > Netcoredbg is terminated due to call to std::terminate: see stderr...
