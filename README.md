@@ -23,3 +23,13 @@ appid=$!
 dbpid=$("ps --ppid $appid")
 fg 
 ```
+
+```
+:lua require'dap'.run({dap config})
+```
+
+```bash
+pgrep -a main
+#find process to attach debuger with main.dll name of runtime
+#its process under dot net run
+```
