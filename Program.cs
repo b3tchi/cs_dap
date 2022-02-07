@@ -20,16 +20,15 @@ class GFG {
         // name = "abc";
         Console.WriteLine("Enter your age: ");
         // Converted string to int
-        // age = Convert.ToInt32(Console.ReadLine()); 
-        age = 1;
+        age = Convert.ToInt32(Console.ReadLine());
+        // age = 1;
         if (age >= 18)
         {
-            Console.WriteLine("Hello " + name + "!"
-                        + " You can vote");
+            Console.WriteLine("Hello " + name + "!" + " You can vote");
         }
-        else {
-            Console.WriteLine("Hello " + name + "!"
-                + " Sorry you can't vote");
+        else
+        {
+            Console.WriteLine("Hello " + name + "!" + " Sorry you can't vote");
         }
     }
 }
