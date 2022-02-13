@@ -5,11 +5,11 @@ class GFG {
     // Main Method
     public static void Main()
     {
-        // Console.WriteLine("Waiting for debugger to attach");
-        //     while (!System.Diagnostics.Debugger.IsAttached)
-        //     {
-        //         Thread.Sleep(100);
-        //     }
+        Console.WriteLine("Waiting for debugger to attach");
+            while (!System.Diagnostics.Debugger.IsAttached)
+            {
+                Thread.Sleep(100);
+            }
         int age;
         string name;
         Console.WriteLine("Enter your name:? ");

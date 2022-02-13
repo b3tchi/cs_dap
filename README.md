@@ -3,7 +3,8 @@ dotnet build
 ```
 debug via cli
 --run arg to start imediatly
-```bashintegratedTerminal
+```bash
+# integratedTerminal
 ~/.local/share/nvim/dapinstall/dnetcs/netcoredbg/netcoredbg --run --interpreter=cli -- /usr/bin/dotnet ./bin/Debug/net6.0/main.dll
 ```
 
@@ -64,6 +65,59 @@ cmd=":lua require'dap'.run(<CFG>)"
 cmdc=$cmd
 cmdc="${cmdc/<CFG>/${cfg}}"
 cmdc="${cmdc/<PID>/${ppid}}"
-tmux send-keys -t cs_debug:nvim.1 $cmdc C-m
+tmux send-keys -t cs_debug@main:1.1 $cmdc C-m
 fg
+```
+current buffer type
+
+```vim
+:echom getbufvar(bufnr(),'&filetype')
+```
+```vim
+:echom VimuxPromptCommand()
+```
+
+```vim
+" call VimuxRunCommand('dotnet build')
+call VimuxRunCommand('dotnet run')
+lua << EOF
+function shll(ppid)
+function sleep(n)
+  os.execute("sleep " .. tonumber(n))
+end
+local result
+try = 10
+while( result == nil or result == '' )
+do
+print(result)
+local handle = io.popen("ps --no-headers -o pid --ppid " .. ppid)
+result = handle:read("*a")
+handle:close()
+try = try - 1
+sleep(1)
+print(try)
+if ( try == 0 ) then
+break
+end
+end
+return result
+
+end
+
+  local panepid = 168779
+  local appid = shll(panepid)
+  local dbgpid = shll(appid)
+
+  print(panepid)
+  print(appid)
+  print(dbgpid)
+
+local cfg = {type="netcoredbg", request="attach", processId=dbgpid}
+require'dap'.run(cfg)
+
+-- vim.cmd([[
+--  echom VimuxRunCommand('dotnet run')
+-- ]])
+EOF
+
 ```
