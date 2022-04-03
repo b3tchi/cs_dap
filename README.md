@@ -20,16 +20,50 @@ get pid of the project
 dotnet build
 dotnet run &
 appid=$!
-dbpid=$("ps --ppid $appid")
-fg 
+while [[ -z $dbpid ]];do
+dbpid=$(ps --no-headers -o pid --ppid $appid)
+donet
+# echo "found $appid $dpid"
+fg
 ```
 
+run debugger with attach
 ```
 :lua require'dap'.run({dap config})
 ```
 
 ```bash
-pgrep -a main
-#find process to attach debuger with main.dll name of runtime
-#its process under dot net run
+echo$(ps --no-headers -o pid --ppid 102437)
+```
+
+```bash
+ppid=154789
+cfg='{type="netcoredbg", request="attach", processId=<PID>}'
+cmd=":lua require'dap'.run(<CFG>)"
+
+cmdc=$cmd
+cmdc="${cmdc/<CFG>/${cfg}}"
+cmdc="${cmdc/<PID>/${ppid}}"
+echo $cmdc
+tmux send-keys -t cs_debug:nvim.1 $cmdc
+```
+
+```bash
+dotnet build
+dotnet run &
+appid=$!
+ppid=""
+while [[ -z $ppid ]];do
+ppid=$(ps --no-headers -o pid --ppid $appid)
+done
+echo "found $appid $ppid"
+# ppid=
+cfg='{type="netcoredbg", request="attach", processId=<PID>}'
+cmd=":lua require'dap'.run(<CFG>)"
+
+cmdc=$cmd
+cmdc="${cmdc/<CFG>/${cfg}}"
+cmdc="${cmdc/<PID>/${ppid}}"
+tmux send-keys -t cs_debug:nvim.1 $cmdc C-m
+fg
 ```
