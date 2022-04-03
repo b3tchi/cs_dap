@@ -121,3 +121,8 @@ require'dap'.run(cfg)
 EOF
 
 ```
+-a all sessions
+-s current session
+```bash
+tmux list-panes -s -F "#{pane_current_command} #{pane_pid} #{session_name}"
+```
